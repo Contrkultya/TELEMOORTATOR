@@ -36,7 +36,8 @@ const router = new Router({
         requiresAuth: true
       }
     }
-  ]
+  ],
+  mode: 'history'
 });
 
 router.beforeEach((to, from, next) => {
