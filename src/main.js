@@ -26,6 +26,7 @@ firebase.auth().onAuthStateChanged(() => {
   if (!app) {
     /* eslint-disable no-new */
     app = new Vue({
+      Vuetify,
       router,
       render: h => h(App)
     }).$mount('#app');
