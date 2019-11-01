@@ -19,6 +19,8 @@ const config = {
   appId: "1:949803695350:web:efabda81846db0218840d7"
 };
 firebase.initializeApp(config);
+Vue.use(Vuetify);
+Vue.use(Vuex);
 
 firebase.auth().onAuthStateChanged(() => {
   if (!app) {
