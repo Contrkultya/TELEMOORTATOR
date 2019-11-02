@@ -1,8 +1,10 @@
 <template>
   <v-app>
     <v-app-bar app>
+      <img class="mr-3" :src="require('./assets/moor.png')" height="60"/>
       <v-toolbar-title class="headline text-uppercase">
-        <span>TELEPORT</span>
+        <span >TELEPORT</span>
+
         
       </v-toolbar-title>
       <v-spacer></v-spacer>
