@@ -3,6 +3,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Home from '@/views/Home';
+import Tasks from '@/views/Tasks';
 import Login from '@/views/Login';
 import SignUp from '@/views/SignUp';
 import Land from '@/views/Land';
@@ -31,6 +32,11 @@ const router = new Router({
       name: 'SignUp',
       component: SignUp
     },
+      {
+          path: '/tasks',
+          name: 'Tasks',
+          component: Tasks
+      },
     {
       path: '/home',
       name: 'Home',

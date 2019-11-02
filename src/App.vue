@@ -8,7 +8,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items >
         <v-btn text class=" white--text">Информация</v-btn>
-        <v-btn text class=" white--text">Задания</v-btn>
+        <v-btn text class=" white--text" to="/tasks">Задания</v-btn>
         <v-btn text class=" white--text" to="/account">Аккаунт</v-btn>
       </v-toolbar-items>
     </v-app-bar>
