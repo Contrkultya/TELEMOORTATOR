@@ -1,12 +1,13 @@
 <template>
-    <v-card class="mx-auto">
+    <div>
+    <v-card class="mx-auto" v-for="item in getTasks">
         <div class="header">
             <p>HARD</p>
         </div>
-        <v-card-title>Top western road trips</v-card-title>
+        <v-card-title>{{item.info}}</v-card-title>
         <v-card-subtitle>1,000 miles of wonder</v-card-subtitle>
         <v-card-actions>
-            <v-btn text>Share</v-btn>
+            <v-btn text></v-btn>
             <v-btn color="purple" text>Explore</v-btn>
             <v-spacer></v-spacer>
             <v-btn icon @click="show = !show">
@@ -22,6 +23,7 @@
             </div>
         </v-expand-transition>
     </v-card>
+    </div>
 </template>
 
 <script>
@@ -30,6 +32,11 @@
         data() {
             return {
                 show: false
+            }
+        },
+        computed:{
+            getTasks(){
+                return this.$store.getters.getTasks;
             }
         }
     }

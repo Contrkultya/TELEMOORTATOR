@@ -23,6 +23,9 @@ export const store = new Vuex.Store({
         getUserById: state => login => {
             return state.users.find(user => user.login === login);
           },
+        getTasks(state){
+            return state.works;
+        }
     },
     mutations:{},
     actions:{},
