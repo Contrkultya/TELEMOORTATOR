@@ -3,7 +3,7 @@
     <h3>Sign In</h3>
     <input type="text" v-model="email" placeholder="Email"><br>
     <input type="password" v-model="password" placeholder="Password"><br>
-    <button @click="login">Connection</button>
+    <v-btn @click="login">Connection</v-btn>
     <p>You don't have an account ? You can <router-link to="/sign-up">create one</router-link></p>
   </div>
 </template>
@@ -37,6 +37,7 @@
 <style scoped>  /* "scoped" attribute limit the CSS to this component only */
   .login {
     margin-top: 40px;
+    text-align: center;
   }
   input {
     margin: 10px 0;

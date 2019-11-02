@@ -3,7 +3,7 @@
     <p>Let's create a new account !</p>
     <input type="text" v-model="email" placeholder="Email"><br>
     <input type="password" v-model="password" placeholder="Password"><br>
-    <button @click="signUp">Sign Up</button>
+    <v-btn @click="signUp">Sign Up</v-btn>
     <span>or go back to <router-link to="/login">login</router-link>.</span>
   </div>
 </template>
@@ -37,6 +37,7 @@
  <style scoped>
   .sign-up {
     margin-top: 40px;
+    text-align: center;
   }
   input {
     margin: 10px 0;
