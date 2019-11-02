@@ -4,8 +4,6 @@
     <input type="text" v-model="login" placeholder="Логин"><br>
     <input type="password" v-model="password" placeholder="Пароль"><br>
     <input type="password" v-model="passwordconf" placeholder="Повторите пароль"> <br>
-    <input type="text" v-model="fio" placeholder="Полное имя"><br>
-    <input type="text" v-model="phone" placeholder="Номер телефона"><br>
     <v-btn x-large  @click="signUp" color="success" dark class="mt-4" to = "/sign-Up">Зарегистрироваться</v-btn>
     <span>Или вернуться к форме <router-link to="/login">авторизации</router-link>.</span>
   </div>
@@ -20,9 +18,6 @@
         email: '',
         password: '',
         passwordconf: '',
-        login: '',
-        fio:'',
-        phone:'',
       }
     },
     methods: {

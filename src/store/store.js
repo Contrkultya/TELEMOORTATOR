@@ -19,7 +19,11 @@ export const store = new Vuex.Store({
             {info: "Покажи ассортимент Магнита" , location:"[]", master:"contrcultya", price:700, slave:"your_submissive", status:1, submit_time:{seconds: 915130800, nanoseconds: 0}, time_done:{seconds: 915130800, nanoseconds: 0}, time_limit:{seconds: 915130800, nanoseconds: 0}, type:0, video_url:"", },
         ],
     },
-    getters:{},
+    getters:{
+        getUserById: state => login => {
+            return state.users.find(user => user.login === login);
+          },
+    },
     mutations:{},
     actions:{},
 })
