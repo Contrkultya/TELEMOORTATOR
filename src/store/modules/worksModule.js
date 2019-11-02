@@ -10,7 +10,7 @@ const worksModule = {
     state: {},
     getters: {        
         getTasks(state){
-        return state.works;
+        return state.data;
     }},
     mutations: {},
     actions: {},
