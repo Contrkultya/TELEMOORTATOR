@@ -1,10 +1,10 @@
 <template>
   <div class="sign-up">
-    <p>Let's create a new account !</p>
+    <p>Давайте создадим вам аккаунт!</p>
     <input type="text" v-model="email" placeholder="Email"><br>
-    <input type="password" v-model="password" placeholder="Password"><br>
-    <v-btn @click="signUp">Sign Up</v-btn>
-    <span>or go back to <router-link to="/login">login</router-link>.</span>
+    <input type="password" v-model="password" placeholder="Пароль"><br>
+    <v-btn @click="signUp">Создать</v-btn>
+    <span>или <router-link to="/login">войти</router-link>.</span>
   </div>
 </template>
 
