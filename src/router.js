@@ -6,6 +6,7 @@ import Home from '@/views/Home';
 import Login from '@/views/Login';
 import SignUp from '@/views/SignUp';
 import Land from '@/views/Land';
+import Account from'@/views/Account';
 
 Vue.use(Router);
 
@@ -37,6 +38,11 @@ const router = new Router({
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path:'/account',
+      name:'Account',
+      component: Account
     }
 
   ],

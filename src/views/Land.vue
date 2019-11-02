@@ -4,7 +4,7 @@
                     <v-layout align-center="" class="" column wrap >
                         <v-flex xs12>
                             <v-container grid-list-xl >
-                                <v-layout justify-space-between="" row wrap >
+                                <v-layout justify-space-around="" row wrap >
                                     <v-flex md4 xs12>
                                         <h1 class="mb-4">Хотите иметь возможность попасть в любую точку миру в любой момент?</h1>
                                         У вас есть такая возможность! С помошью сервиса teleport вы сможете оказаться
@@ -26,8 +26,6 @@
                         </v-flex>
                     </v-layout>
                 </section>
-
-
     </div>
 
 </template>

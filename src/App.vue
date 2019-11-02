@@ -9,7 +9,7 @@
       <v-toolbar-items >
         <v-btn text class=" white--text">Иформация</v-btn>
         <v-btn text class=" white--text">Задания</v-btn>
-        <v-btn text class=" white--text"></v-btn>
+        <v-btn text class=" white--text" to="/account">Аккаунт</v-btn>
       </v-toolbar-items>
     </v-app-bar>
 
