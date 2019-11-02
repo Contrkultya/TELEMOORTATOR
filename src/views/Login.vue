@@ -1,8 +1,8 @@
 <template>
   <div class="login">
     <h3>Вход</h3>
-    <input type="text" v-model="email" placeholder="Email"><br>
-    <input type="password" v-model="password" placeholder="Пароль"><br>
+    <v-text-field type="text" v-model="email" placeholder="Email"><br></v-text-field>
+    <v-text-field type="password" v-model="password" placeholder="Пароль"><br></v-text-field>
     <v-btn @click="login">Войти</v-btn>
     <p> У вас нет аккаунта? Вы можете <router-link to="/sign-up">создать учетную запись</router-link></p>
   </div>
