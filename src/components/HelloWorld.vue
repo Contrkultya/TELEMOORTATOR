@@ -79,14 +79,18 @@
             {{ eco.text }}
           </a>
         </v-layout>
+        <v-btn @click="logout">Logout</v-btn>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import firebase from 'firebase';
+
 export default {
   data: () => ({
+    
     ecosystem: [
       {
         text: 'vuetify-loader',
@@ -138,5 +142,13 @@ export default {
       },
     ],
   }),
+    methods: {
+    logout: function() {
+      firebase.auth().signOut().then(() => {
+        this.$router.replace('login')
+      })
+    }
+  }
+
 };
 </script>
