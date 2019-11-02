@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
     export default {
         name: "tasks",
         data() {
@@ -28,7 +29,8 @@
         },
         computed:{
             getTasks(){
-                return this.$store.getters.getTasks;
+                this.$store.dispatch('worksModule/openDBChannel');
+                return this.$store.getters.getTasks();
             }
         }
     }

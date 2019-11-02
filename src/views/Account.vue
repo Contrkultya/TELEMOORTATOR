@@ -50,8 +50,16 @@
 
 <script>
     export default {
-        name: "Account"
+        name: "Account",
+        computed:{
+            getUsers(){
+                this.$store.dispatch('worksModule/openDBChannel');
+                this.$store.dispatch('usersModule/openDBChannel');
+                return this.$store.getters.getUsers;
+            }
+        }
     }
+    
 </script>
 
 <style scoped>
