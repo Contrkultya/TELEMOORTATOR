@@ -2,7 +2,6 @@ import firebase from 'firebase';
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Home from '@/views/Home';
 import Tasks from '@/views/Tasks';
 import Login from '@/views/Login';
 import SignUp from '@/views/SignUp';
@@ -40,14 +39,6 @@ const router = new Router({
             requiresAuth: true
           }
       },
-    {
-      path: '/home',
-      name: 'Home',
-      component: Home,
-      meta: {
-        requiresAuth: true
-      }
-    },
     {
       path:'/account',
       name:'Account',
