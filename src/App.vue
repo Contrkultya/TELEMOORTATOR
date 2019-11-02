@@ -10,11 +10,9 @@
       <v-spacer></v-spacer>
       <v-btn
         text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mr-2">Последний релиз!</span>
       </v-btn>
     </v-app-bar>
 
