@@ -35,7 +35,7 @@
                 </v-card>
             </v-col>
             <v-col cols="6" md="4">
-                <v-card class="pa-2 ml-4"outlined tile>
+                <v-card class="pa-2 ml-4" outlined tile>
                     Рейтинг: <v-rating v-model="rating" class="d-inline-block" background-color="purple lighten-3" color="purple" small></v-rating> <br>
                     Заданий выполнено : 228 <br>
                     Заданий создано: 1337 <br>
