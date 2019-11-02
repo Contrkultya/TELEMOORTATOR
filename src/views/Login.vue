@@ -10,7 +10,6 @@
 
 <script>
   import firebase from 'firebase';
-  import db from '../firebase'
   export default {
     name: 'login',
     data() {
@@ -23,18 +22,13 @@
       login: function() {
         firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
           () => {
-            this.$router.replace('account')
+            this.$router.replace('account');
+            this.$store.dispatch('worksModule/openDBChannel');
           },
           (err) => {
             alert('Oops. ' + err.message)
           }
         );
-        db.collection("users").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
-        console.log(this.$store.state.mamka.toString());
-    });
-});
       }
     }
   }
