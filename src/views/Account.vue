@@ -55,7 +55,7 @@
             getUsers(){
                 this.$store.dispatch('worksModule/openDBChannel');
                 this.$store.dispatch('usersModule/openDBChannel');
-                return this.$store.getters.getUsers;
+                //return this.$store.getters.getUser;
             }
         }
     }

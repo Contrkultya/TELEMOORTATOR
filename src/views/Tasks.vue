@@ -30,7 +30,8 @@
         computed:{
             getTasks(){
                 this.$store.dispatch('worksModule/openDBChannel');
-                return this.$store.getters.getTasks();
+                return this.$store.getters.getTasks;
+
             }
         }
     }
