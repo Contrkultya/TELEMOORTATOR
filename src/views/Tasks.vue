@@ -1,20 +1,28 @@
 <template>
     <div class="tasks">
         <v-card class="mx-auto" v-for="item in getTasks">
-            <div class="header">
-                <p>Сложно</p>
+            <div :class="getDificulty(item.type)">
+                <p>{{typeDificulty(item.type)}}</p>
             </div>
-            <v-card-title>{{item.info}}</v-card-title>
-            <v-card-subtitle>Форэк майн</v-card-subtitle>
-            <v-spacer></v-spacer>
-            <v-card-actions>
-                <v-btn text>Написать</v-btn>
-                <v-btn color="purple" text>Взять</v-btn>
-                <v-spacer></v-spacer>
-                Цена: 300 bucks
-            </v-card-actions>
+            <div class="d-flex flex-no-wrap justify-space-between">
+                <div>
+                    <v-card-title>{{item.info}}</v-card-title>
+                    <v-card-subtitle>{{item.desc}}</v-card-subtitle>
+                    <v-card-actions>
+                        <v-btn large>Написать</v-btn>
+                        <v-btn large color="blue lighten-4 ">Взять</v-btn>
+                        <v-spacer></v-spacer>
+                    </v-card-actions>
+                </div>
+                <div>
+                    <v-card-title>{{toDateTime(item.submit_time.seconds)}}<br></v-card-title>
+                    <v-card-subtitle>{{item.master}}<br></v-card-subtitle>
+                    <v-card-title>Цена: {{item.price}}</v-card-title>
+                </div>
+            </div>
         </v-card>
     </div>
+
 
 </template>
 

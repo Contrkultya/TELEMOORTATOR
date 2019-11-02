@@ -1,9 +1,9 @@
 <template>
-  <div class="sign-up">
+  <div class="sign-up mt-4">
     <p>Давайте создадим новый аккаунт!</p>
-    <input type="text" v-model="email" placeholder="Адрес электронной почты"><br>
-    <input type="password" v-model="password" placeholder="Пароль"><br>
-    <input type="password" v-model="passwordconf" placeholder="Повторите пароль"> <br>
+      <v-text-field type="text" v-model="email" placeholder="Адрес электронной почты"><br> </v-text-field>
+    <v-text-field type="password" v-model="password" placeholder="Пароль"><br></v-text-field>
+    <v-text-field type="password" v-model="passwordconf" placeholder="Повторите пароль"> <br></v-text-field>
     <v-btn x-large  @click="signUp" color="success" dark class="mt-4" to = "/sign-Up">Зарегистрироваться</v-btn>
     <span>Или вернуться к форме <router-link to="/login">авторизации</router-link>.</span>
   </div>
@@ -37,8 +37,9 @@
 
  <style scoped>
   .sign-up {
-    margin-top: 40px;
-    text-align: center;
+      margin: auto;
+      text-align: center;
+      width: 50%;
   }
   input {
     margin: 10px 0;

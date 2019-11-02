@@ -6,6 +6,7 @@
         <router-link style="color: white; text-decoration: none" to="/"><span >TELEPORT</span></router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-text-field label="Поиск" class="mt-6"></v-text-field>
       <v-toolbar-items >
         <v-btn text class=" white--text">Информация</v-btn>
         <v-btn text class=" white--text" to="/tasks">Задания</v-btn>
