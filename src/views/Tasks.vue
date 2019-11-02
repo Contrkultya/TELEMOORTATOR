@@ -2,18 +2,32 @@
 
     <div class="tasks">
         <v-card class="mx-auto">
-        <div class="header">
-            <p>Сложно</p>
-        </div>
-        <v-card-title>Обыграть Моора в  нарды</v-card-title>
-        <v-card-subtitle>Форэк майн</v-card-subtitle>
-    </v-card>
+            <div class="header">
+                <p>Сложно</p>
+            </div>
+            <v-card-title>Обыграть Моора в  нарды</v-card-title>
+            <v-card-subtitle>Форэк майн</v-card-subtitle>
+            <v-spacer></v-spacer>
+            <v-card-actions>
+                <v-btn text>Написать</v-btn>
+                <v-btn color="purple" text>Взять</v-btn>
+                <v-spacer></v-spacer>
+                Цена: 300 bucks
+            </v-card-actions>
+        </v-card>
         <v-card class="mx-auto">
             <div class="header">
                 <p>Сложно</p>
             </div>
             <v-card-title>Обыграть Моора в  нарды</v-card-title>
             <v-card-subtitle>Форэк майн</v-card-subtitle>
+            <v-spacer></v-spacer>
+            <v-card-actions>
+                <v-btn text>Написать</v-btn>
+                <v-btn color="purple" text>Взять</v-btn>
+                <v-spacer></v-spacer>
+                Цена: 300 bucks
+            </v-card-actions>
         </v-card>
     </div>
 
