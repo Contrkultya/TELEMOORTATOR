@@ -5,6 +5,7 @@ import router from './router';
 import Vuex from 'vuex';
 import vuetify from './plugins/vuetify';
 import '@babel/polyfill'
+//import VueFire from 'vuefire';
 Vue.config.productionTip = false;
 
 let app = '';
@@ -20,6 +21,8 @@ const config = {
 firebase.initializeApp(config);
 Vue.use(vuetify);
 Vue.use(Vuex);
+//Vue.use(VueFire);
+
 
 firebase.auth().onAuthStateChanged(() => {
   if (!app) {

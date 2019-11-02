@@ -10,7 +10,7 @@
 
 <script>
   import firebase from 'firebase';
-
+  //import store from '../store/store';
   export default {
     name: 'login',
     data() {
