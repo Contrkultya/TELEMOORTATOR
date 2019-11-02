@@ -1,27 +1,22 @@
 <template>
-    <v-card class="mx-auto">
+
+    <div class="tasks">
+        <v-card class="mx-auto">
         <div class="header">
-            <p>HARD</p>
+            <p>Сложно</p>
         </div>
-        <v-card-title>Top western road trips</v-card-title>
-        <v-card-subtitle>1,000 miles of wonder</v-card-subtitle>
-        <v-card-actions>
-            <v-btn text>Share</v-btn>
-            <v-btn color="purple" text>Explore</v-btn>
-            <v-spacer></v-spacer>
-            <v-btn icon @click="show = !show">
-                <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-            </v-btn>
-        </v-card-actions>
-        <v-expand-transition>
-            <div v-show="show">
-                <v-divider></v-divider>
-                <v-card-text>
-                    tasks.
-                </v-card-text>
-            </div>
-        </v-expand-transition>
+        <v-card-title>Обыграть Моора в  нарды</v-card-title>
+        <v-card-subtitle>Форэк майн</v-card-subtitle>
     </v-card>
+        <v-card class="mx-auto">
+            <div class="header">
+                <p>Сложно</p>
+            </div>
+            <v-card-title>Обыграть Моора в  нарды</v-card-title>
+            <v-card-subtitle>Форэк майн</v-card-subtitle>
+        </v-card>
+    </div>
+
 </template>
 
 <script>
