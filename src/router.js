@@ -5,6 +5,7 @@ import Router from 'vue-router';
 import Home from '@/views/Home';
 import Login from '@/views/Login';
 import SignUp from '@/views/SignUp';
+import Land from '@/views/Land';
 
 Vue.use(Router);
 
@@ -16,7 +17,8 @@ const router = new Router({
     },
     {
       path: '/',
-      redirect: '/login'
+      name: 'Land',
+      component: Land
     },
     {
       path: '/login',
@@ -36,6 +38,7 @@ const router = new Router({
         requiresAuth: true
       }
     }
+
   ],
   mode: 'history'
 });

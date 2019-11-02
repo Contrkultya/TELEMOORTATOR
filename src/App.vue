@@ -1,19 +1,16 @@
 <template>
   <v-app>
-    <v-app-bar app>
+    <v-app-bar app class="green white--text">
       <img class="mr-3" :src="require('./assets/moor.png')" height="60"/>
-      <v-toolbar-title class="headline text-uppercase">
-        <span >TELEPORT</span>
-
-        
+      <v-toolbar-title class="headline text-uppercase" dark>
+        <router-link style="color: white; text-decoration: none" to="/"><span >TELEPORT</span></router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        target="_blank"
-      >
-        <span class="mr-2">Последний релиз!</span>
-      </v-btn>
+      <v-toolbar-items >
+        <v-btn text class=" white--text">Иформация</v-btn>
+        <v-btn text class=" white--text">Задания</v-btn>
+        <v-btn text class=" white--text"></v-btn>
+      </v-toolbar-items>
     </v-app-bar>
 
     <v-content>
