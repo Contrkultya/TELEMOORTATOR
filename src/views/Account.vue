@@ -39,8 +39,8 @@
                     Рейтинг: <v-rating v-model="rating" class="d-inline-block" background-color="purple lighten-3" color="purple" small></v-rating> <br>
                     Заданий выполнено : 228 <br>
                     Заданий создано: 1337 <br>
-                    <v-btn color="success" dark large width="170">Создать задание</v-btn>
-                    <v-btn color="success" class="ml-2" dark large width="170">Мои задания</v-btn>
+                    <v-btn color="success" dark large width="170" class="mt-4">Создать задание</v-btn>
+                    <v-btn color="success" class="ml-2 mt-4" dark large width="170">Мои задания</v-btn>
                 </v-card>
 
             </v-col>
