@@ -24,7 +24,12 @@
 
 <script>
     export default {
-        name: "tasks"
+        name: "tasks",
+        data() {
+            return {
+                show: false
+            }
+        }
     }
 </script>
 
