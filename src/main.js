@@ -5,6 +5,7 @@ import router from './router';
 import Vuex from 'vuex';
 import vuetify from './plugins/vuetify';
 import '@babel/polyfill'
+import {store} from './store/store'
 //import VueFire from 'vuefire';
 Vue.config.productionTip = false;
 
@@ -21,6 +22,7 @@ firebase.auth().onAuthStateChanged(() => {
     app = new Vue({
       router,
       vuetify,
+      store,
       render: h => h(App)
     }).$mount('#app');
   }
