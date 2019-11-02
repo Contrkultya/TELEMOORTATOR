@@ -1,7 +1,7 @@
 <template>
     <div id="land">
                 <section>
-                    <v-layout align-center="" class="" column wrap >
+                    <v-layout align-center="" class=" mt-4" column wrap >
                         <v-flex xs12>
                             <v-container grid-list-xl >
                                 <v-layout justify-space-around="" row wrap >
@@ -12,7 +12,7 @@
                                         <h1 class="mb-4 mt-4">Как это работает?</h1>
                                         Нужно посмотреть на определенное место в городе? Узнать как пройти в
                                         определенное место? Оставьте свою заявку на teleport. Исполнители могут их выполнять.
-                                        Результатом работы является прямая трансляция или видеозапись того, что требовалось в заявке.
+                                        Результатом работы является прямая трансляция или видеозапись того, что требовалось в заявке.<br>
                                         <v-btn x-large color="success" dark class="mt-4" to = "/sign-Up">Создать аккаунт</v-btn>
                                     </v-flex>
                                     <v-flex mr4 xs5  class="d-flex" justify="space-around">
