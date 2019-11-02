@@ -13,12 +13,12 @@
                                         Нужно посмотреть на определенное место в городе? Узнать как пройти в
                                         определенное место? Оставьте свою заявку на teleport. Исполнители могут их выполнять.
                                         Результатом работы является прямая трансляция или видеозапись того, что требовалось в заявке.
-
+                                        <v-btn x-large color="success" dark class="mt-4" to = "/sign-Up">Создать аккаунт</v-btn>
                                     </v-flex>
                                     <v-flex mr4 xs5  class="d-flex" justify="space-around">
                                         <v-flex>
                                         <v-img :src="require('../assets/pic1.jpg')" />
-                                        <v-img :src="require('../assets/pic2.png')" />
+                                        <v-img :src="require('../assets/pic2.png')" class="mt-4"  />
                                         </v-flex>
                                     </v-flex>
                                 </v-layout>
