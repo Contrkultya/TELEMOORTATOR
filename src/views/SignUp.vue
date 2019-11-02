@@ -1,10 +1,14 @@
 <template>
   <div class="sign-up">
-    <p>Let's create a new account !</p>
+    <p>Давайте создадим новый аккаунт!</p>
     <input type="text" v-model="email" placeholder="Email"><br>
-    <input type="password" v-model="password" placeholder="Password"><br>
-    <v-btn @click="signUp">Sign Up</v-btn>
-    <span>or go back to <router-link to="/login">login</router-link>.</span>
+    <input type="text" v-model="login" placeholder="Логин"><br>
+    <input type="password" v-model="password" placeholder="Пароль"><br>
+    <input type="password" v-model="password" placeholder="Повторите пароль"> <br>
+    <input type="text" v-model="fio" placeholder="Полное имя"><br>
+    <input type="text" v-model="phone" placeholder="Номер телефона"><br>
+    <v-btn @click="signUp">Зарегестрироваться</v-btn>
+    <span>Или вернуться к форме <router-link to="/login">авторизации</router-link>.</span>
   </div>
 </template>
 
@@ -16,7 +20,10 @@
     data() {
       return {
         email: '',
-        password: ''
+        password: '',
+        login: '',
+        fio:'',
+        phone:'',
       }
     },
     methods: {
