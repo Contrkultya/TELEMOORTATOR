@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "Tasks.vue"
+        name: "Task"
     }
 </script>
 
