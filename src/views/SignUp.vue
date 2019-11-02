@@ -3,7 +3,7 @@
     <p>Давайте создадим новый аккаунт!</p>
     <input type="text" v-model="login" placeholder="Логин"><br>
     <input type="password" v-model="password" placeholder="Пароль"><br>
-    <input type="password" v-model="password" placeholder="Повторите пароль"> <br>
+    <input type="password" v-model="passwordconf" placeholder="Повторите пароль"> <br>
     <input type="text" v-model="fio" placeholder="Полное имя"><br>
     <input type="text" v-model="phone" placeholder="Номер телефона"><br>
     <v-btn @click="signUp">Зарегистрироваться</v-btn>
@@ -13,13 +13,13 @@
 
  <script>
   import firebase from 'firebase';
-
   export default {
     name: 'signUp',
     data() {
       return {
         email: '',
         password: '',
+        passwordconf: '',
         login: '',
         fio:'',
         phone:'',

@@ -10,7 +10,7 @@
 
 <script>
   import firebase from 'firebase';
-
+  import db from '../firebase'
   export default {
     name: 'login',
     data() {
@@ -29,6 +29,11 @@
             alert('Oops. ' + err.message)
           }
         );
+        db.collection("users").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+    });
+});
       }
     }
   }
