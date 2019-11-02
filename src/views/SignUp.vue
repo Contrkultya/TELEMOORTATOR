@@ -1,7 +1,7 @@
 <template>
   <div class="sign-up">
     <p>Давайте создадим новый аккаунт!</p>
-    <input type="text" v-model="login" placeholder="Адрес электронной почты"><br>
+    <input type="text" v-model="email" placeholder="Адрес электронной почты"><br>
     <input type="password" v-model="password" placeholder="Пароль"><br>
     <input type="password" v-model="passwordconf" placeholder="Повторите пароль"> <br>
     <v-btn x-large  @click="signUp" color="success" dark class="mt-4" to = "/sign-Up">Зарегистрироваться</v-btn>
