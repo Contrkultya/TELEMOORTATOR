@@ -1,6 +1,6 @@
 <template>
   <div class="sign-up mt-4">
-    <p>Давайте создадим новый аккаунт!</p>
+    <h3>Давайте создадим новый аккаунт!</h3>
       <v-text-field type="text" v-model="email" placeholder="Адрес электронной почты"><br> </v-text-field>
     <v-text-field type="password" v-model="password" placeholder="Пароль"><br></v-text-field>
     <v-text-field type="password" v-model="passwordconf" placeholder="Повторите пароль"> <br></v-text-field>

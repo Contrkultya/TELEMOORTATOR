@@ -7,6 +7,8 @@ import Login from '@/views/Login';
 import SignUp from '@/views/SignUp';
 import Land from '@/views/Land';
 import Account from'@/views/Account';
+import CreateTask from "@/views/CreateTask";
+import Info from "@/views/Info";
 
 Vue.use(Router);
 
@@ -46,6 +48,20 @@ const router = new Router({
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path:'/createTask',
+      name:'Create task',
+      component: CreateTask,
+      meta: {
+        requiresAuth: true
+      }
+      }
+      ,
+    {
+      path:'/info',
+      name:'Info',
+      component: Info,
     }
 
   ],
