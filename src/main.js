@@ -3,9 +3,8 @@ import firebase from 'firebase';
 import App from './App.vue';
 import router from './router';
 import Vuex from 'vuex';
-import Vuetify from 'vuetify';
-
-
+import vuetify from './plugins/vuetify';
+import '@babel/polyfill'
 Vue.config.productionTip = false;
 
 let app = '';
@@ -19,15 +18,15 @@ const config = {
   appId: "1:949803695350:web:efabda81846db0218840d7"
 };
 firebase.initializeApp(config);
-Vue.use(Vuetify);
+Vue.use(vuetify);
 Vue.use(Vuex);
 
 firebase.auth().onAuthStateChanged(() => {
   if (!app) {
     /* eslint-disable no-new */
     app = new Vue({
-      Vuetify,
       router,
+      vuetify,
       render: h => h(App)
     }).$mount('#app');
   }
