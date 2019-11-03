@@ -37,14 +37,8 @@
 </template>
 
 <script>
-
-import { auth } from 'firebase';
-var user = firebase.auth().currentUser;
-for(users in getUsers()){
-    if(this.uid = user.uid){
-        user = this.user;
-    } 
-}
+//import { auth } from 'firebase';
+//var user = firebase.auth().currentUser;
     export default {
         name: "Account",
         computed:{
