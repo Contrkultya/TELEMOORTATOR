@@ -1,24 +1,32 @@
 <template>
     <div class="tasks">
-        <v-card class="mx-auto" v-for="item in getTasks">
-            <div :class="getDificulty(item.type)">
-                <p>{{typeDificulty(item.type)}}</p>
+        <v-card class="mx-auto sas" v-for="item in getTasks" :id="'id'+item.info">
+            <div :class="getDificulty(item.type)" :id="'hdr'+item.info" >
+                <p >{{typeDificulty(item.type)}}</p>
             </div>
-            <div class="d-flex flex-no-wrap justify-space-between">
+            <div class="d-flex flex-no-wrap justify-space-between sas">
                 <div>
                     <v-card-title>{{item.info}}</v-card-title>
                     <v-card-subtitle>{{item.desc}}</v-card-subtitle>
                     <v-card-actions>
                         <v-btn large>Написать</v-btn>
-                        <v-btn large color="blue lighten-4 ">Взять</v-btn>
+                        <v-btn large color="blue lighten-4 " @click='takeTask(item.info)'>Взять</v-btn>
                         <v-spacer></v-spacer>
                     </v-card-actions>
+                    <v-expand-transition>
+                        <div v-show="show">
+                            <v-divider></v-divider>
+
+                            <v-card-text :id="'cardTxt'+item.info">
+                            </v-card-text>
+                        </div>
+                    </v-expand-transition>
                 </div>
-                <div >
-                    <v-card-title >{{toDateTime(item.submit_time.seconds)}}<br></v-card-title>
-                    <v-card-subtitle >{{item.master}}<br></v-card-subtitle>
+                <div>
+                    <v-card-title>{{toDateTime(item.submit_time.seconds)}}<br></v-card-title>
+                    <v-card-subtitle>{{item.master}}<br></v-card-subtitle>
                     <v-card-title>Цена: {{item.price}}</v-card-title>
-            </div>
+                </div>
             </div>
         </v-card>
     </div>
@@ -35,8 +43,8 @@
                 show: false
             }
         },
-        computed:{
-            getTasks(){
+        computed: {
+            getTasks() {
                 this.$store.dispatch('worksModule/openDBChannel');
                 return this.$store.getters['worksModule/getTasks'];
 
@@ -47,11 +55,11 @@
                 var t = new Date(1970, 0, 1);
                 t.setSeconds(secs);
                 var day = t.getDay();
-                if(day < 10){
+                if (day < 10) {
                     day = "0" + day;
                 }
                 var month = t.getMonth();
-                if(month < 10){
+                if (month < 10) {
                     month = "0" + month;
                 }
                 var outism = "" + day + "." + month + '|' + t.getHours() + ":" + t.getMinutes();
@@ -67,26 +75,52 @@
             typeDificulty(type) {
                 let difs = ['Просто', 'Средне', 'Сложно'];
                 return difs[type];
+            },
+            takeTask(taskName) {
+                var myNodeList = document.getElementsByClassName("sas");
+                document.getElementById('hdr' + taskName).className = 'taken';
+                for(var i = 0; i < myNodeList.length; i++){
+                    if(myNodeList[i].classList.contains('taken')){
+                        continue;
+                    }
+                    myNodeList[i].style.display = 'None';
+                }
+                console.log(myNodeList.length);
+                document.getElementById('id' + taskName).style.display = 'Block';
+                this.show = true;
             }
         }
     }
 </script>
 
 <style scoped>
-    .mx-auto{
+    .mx-auto {
         max-width: 97%;
         margin-top: 20px;
     }
-    .mx-auto .header{
+
+    .mx-auto .header {
         background-color: forestgreen;
         height: 70px;
     }
-    .mx-auto .header p{
+
+    .mx-auto .header p {
         color: white;
-        font-family: Helvetica,serif;
+        font-family: Helvetica, serif;
         font-weight: bold;
         font-size: 20pt;
         padding-top: 15px;
         padding-left: 20px;
+    }
+    .taken{
+        height: 70%;
+        background-color: deepskyblue;
+        color: white;
+        font-family: Helvetica, serif;
+        font-weight: bold;
+        font-size: 20pt;
+        padding-top: 15px;
+        padding-left: 20px;
+        height: 70px;
     }
 </style>
