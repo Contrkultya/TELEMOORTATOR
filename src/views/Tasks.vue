@@ -14,11 +14,14 @@
                         <v-spacer></v-spacer>
                     </v-card-actions>
                     <v-expand-transition>
-                        <div v-show="show">
-                            <v-divider></v-divider>
-
-                            <v-card-text :id="'cardTxt'+item.info">
-                            </v-card-text>
+                        <div v-show="show" >
+                            <v-img :src="require('../assets/Igor.png')" class="float-right"  max-width="125"/>
+                            <v-card-title>Заказчик</v-card-title>
+                            <v-card-subtitle>Cuberian</v-card-subtitle>
+                            <v-card-subtitle>Крупкин Игорь Андреевич</v-card-subtitle>
+                            <v-card-subtitle>Cuberian</v-card-subtitle>
+                            <v-card-subtitle>themess@inbox.ru</v-card-subtitle>
+                            <v-card-subtitle>88005553535</v-card-subtitle>
                         </div>
                     </v-expand-transition>
                 </div>

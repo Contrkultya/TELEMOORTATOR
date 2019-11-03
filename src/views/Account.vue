@@ -9,7 +9,7 @@
                             <v-btn x-small color="success" dark>Поменять аватар</v-btn>
                         </div>
                         <v-list-item-content class="ml-5">
-                            <v-list-item-title class="headline mb-1">Пользователь среднестатический</v-list-item-title>
+                            <v-list-item-title class="headline mb-1">timaracer72@gmail.com</v-list-item-title>
                             <v-list-item-subtitle>nickname: we_wanna_win_makerthon</v-list-item-subtitle>
                         </v-list-item-content>
                     </v-list-item>
@@ -27,8 +27,9 @@
                     Рейтинг: <v-rating v-model="rating" class="d-inline-block" background-color="purple lighten-3" color="purple" value=3.4 small></v-rating> <br>
                     Заданий выполнено : 228 <br>
                     Заданий создано: 1337 <br>
-                    <v-btn color="success" dark large width="170" class="mt-4" to = "/createTask">Создать задание</v-btn>
-                    <v-btn color="success" class="ml-2 mt-4" dark large width="170">Мои задания</v-btn>
+                    <v-btn color="success" dark large width="170" class="mt-4 ml-2" to = "/createTask">Создать задание</v-btn>
+                    <v-btn color="success" dark large width="170" class="ml-2 mt-4" to = "/createTask">Настройки</v-btn>
+                    <v-btn color="success"  class=" ml-2 mt-4" dark large width="170">Мои задания</v-btn>
                 </v-card>
 
             </v-col>

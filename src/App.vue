@@ -11,7 +11,8 @@
         <v-btn text class=" white--text" to="/info">Информация</v-btn>
         <v-btn text class=" white--text" to="/tasks">Задания</v-btn>
         <v-btn text class=" white--text" to="/account">Аккаунт</v-btn>
-        <v-btn text class="white--text"  @click="logout">Выйти</v-btn>
+        <v-btn text class="white--text"  @click="logout" id="cock">Выйти</v-btn>
+        <v-btn text class=" white--text" to="/account"> <img class="mr-3" :src="require('./assets/money.png')" height="40"/> 300</v-btn>
       </v-toolbar-items>
     </v-app-bar>
 
@@ -32,7 +33,8 @@ export default {
     logout: function() {
       firebase.auth().signOut().then(() => {
         this.$router.replace('login')
-      })
+      });
+      document.getElementById("cock").innerText = "Войти";
     }
   }
 };
