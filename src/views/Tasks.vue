@@ -42,6 +42,25 @@
 
             }
         }
+        , methods: {
+            toDateTime(secs) {
+                var t = new Date(1970, 0, 1);
+                t.setSeconds(secs);
+                var outism = "" + t.getDay() + "." + t.getMonth() + '|' + t.getHours() + ":" + t.getMinutes();
+                if (t.getMinutes() == 0) {
+                    outism += '0';
+                }
+                return outism;
+            },
+            getDificulty(type) {
+                let colors = ['light-green accent-3', 'yellow accent-4', 'orange accent-4'];
+                return colors[type] + ' header';
+            },
+            typeDificulty(type) {
+                let difs = ['Просто', 'Средне', 'Сложно'];
+                return difs[type];
+            }
+        }
     }
 </script>
 
