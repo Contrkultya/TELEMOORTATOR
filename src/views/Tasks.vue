@@ -53,9 +53,9 @@
                 this.$store.dispatch('usersModule/openDBChannel');
                 return this.$store.getters['usersModule/getUsers'];
             },
-            getUserById(){
+            getUserById(uid){
                 //this.$store.dispatch('usersModule/openDBChannel');
-                return this.$store.getters['usersModule/getUserById'];
+                return this.$store.getters['usersModule/getUserById'](uid);
             }
         }
         , methods: {
