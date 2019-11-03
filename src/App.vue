@@ -11,7 +11,7 @@
         <v-btn text class=" white--text" to="/info">Информация</v-btn>
         <v-btn text class=" white--text" to="/tasks">Задания</v-btn>
         <v-btn text class=" white--text" to="/account">Аккаунт</v-btn>
-        <v-btn text class="white--text" @click="logout">Выйти</v-btn>
+        <v-btn text class="white--text"  @click="logout">Выйти</v-btn>
       </v-toolbar-items>
     </v-app-bar>
 
