@@ -14,11 +14,11 @@
                         <v-spacer></v-spacer>
                     </v-card-actions>
                 </div>
-                <div>
-                    <v-card-title>{{toDateTime(item.submit_time.seconds)}}<br></v-card-title>
-                    <v-card-subtitle>{{item.master}}<br></v-card-subtitle>
+                <div >
+                    <v-card-title >{{toDateTime(item.submit_time.seconds)}}<br></v-card-title>
+                    <v-card-subtitle >{{item.master}}<br></v-card-subtitle>
                     <v-card-title>Цена: {{item.price}}</v-card-title>
-                </div>
+            </div>
             </div>
         </v-card>
     </div>
@@ -46,7 +46,15 @@
             toDateTime(secs) {
                 var t = new Date(1970, 0, 1);
                 t.setSeconds(secs);
-                var outism = "" + t.getDay() + "." + t.getMonth() + '|' + t.getHours() + ":" + t.getMinutes();
+                var day = t.getDay();
+                if(day < 10){
+                    day = "0" + day;
+                }
+                var month = t.getMonth();
+                if(month < 10){
+                    month = "0" + month;
+                }
+                var outism = "" + day + "." + month + '|' + t.getHours() + ":" + t.getMinutes();
                 if (t.getMinutes() == 0) {
                     outism += '0';
                 }
