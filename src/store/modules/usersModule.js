@@ -11,6 +11,9 @@ const usersModule = {
     getters: {
       getUsers(state){
         return state.data;
+      },
+      getUserById: state => uid => {
+        return state.data.find(user => user.uid === uid);
       }
     },
     mutations: {},

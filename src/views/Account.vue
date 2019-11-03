@@ -10,7 +10,7 @@
                         </div>
                         <v-list-item-content class="ml-5">
                             <v-list-item-title class="headline mb-1">Пользователь среднестатический</v-list-item-title>
-                            <v-list-item-subtitle>Info</v-list-item-subtitle>
+                            <v-list-item-subtitle>nickname: we_wanna_win_makerthon</v-list-item-subtitle>
                         </v-list-item-content>
                     </v-list-item>
                     <v-card-actions>

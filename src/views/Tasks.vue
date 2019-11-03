@@ -40,6 +40,14 @@
                 this.$store.dispatch('worksModule/openDBChannel');
                 return this.$store.getters['worksModule/getTasks'];
 
+            },
+            getUsers(){
+                this.$store.dispatch('usersModule/openDBChannel');
+                return this.$store.getters['usersModule/getUsers'];
+            },
+            getUserById(){
+                //this.$store.dispatch('usersModule/openDBChannel');
+                return this.$store.getters['usersModule/getUserById'];
             }
         }
         , methods: {
@@ -67,7 +75,7 @@
             typeDificulty(type) {
                 let difs = ['Просто', 'Средне', 'Сложно'];
                 return difs[type];
-            }
+            },
         }
     }
 </script>
