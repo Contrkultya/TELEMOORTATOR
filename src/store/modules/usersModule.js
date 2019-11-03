@@ -8,7 +8,11 @@ const usersModule = {
     // this object is your store module (will be added as '/myModule')
     // you can also add state/getters/mutations/actions
     state: {},
-    getters: {},
+    getters: {
+      getUsers(state){
+        return state.data;
+      }
+    },
     mutations: {},
     actions: {},
   }

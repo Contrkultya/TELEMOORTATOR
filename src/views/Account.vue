@@ -37,14 +37,22 @@
 </template>
 
 <script>
+
+import { auth } from 'firebase';
+var user = firebase.auth().currentUser;
+for(users in getUsers()){
+    if(this.uid = user.uid){
+        user = this.user;
+    } 
+}
     export default {
         name: "Account",
         computed:{
             getUsers(){
-                this.$store.dispatch('worksModule/openDBChannel');
                 this.$store.dispatch('usersModule/openDBChannel');
-                //return this.$store.getters.getUser;
-            }
+                return this.$store.getters['usersModule/getUsers'];
+            },
+
         }
     }
     

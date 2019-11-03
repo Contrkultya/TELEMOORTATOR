@@ -1,5 +1,5 @@
 const worksModule = {
-    firestorePath: 'works',
+    firestorePath: 'tasks',
     firestoreRefType: 'collection', // or 'doc'
     moduleName: 'worksModule',
     statePropName: 'data',
