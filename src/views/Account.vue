@@ -9,7 +9,7 @@
                             <v-btn x-small color="success" dark>Поменять аватар</v-btn>
                         </div>
                         <v-list-item-content class="ml-5">
-                            <v-list-item-title class="headline mb-1">Username</v-list-item-title>
+                            <v-list-item-title class="headline mb-1">Мамка твая</v-list-item-title>
                             <v-list-item-subtitle>Info</v-list-item-subtitle>
                         </v-list-item-content>
                     </v-list-item>
@@ -17,7 +17,7 @@
                     </v-card-actions>
                 </v-card>
                 <v-card class="mx-auto mt-4 order-3" tile>
-                    <v-list :disabled="disabled" :dense="dense" :two-line="twoLine" :three-line="threeLine" :shaped="shaped" :flat="flat" :subheader="subheader" :inactive="inactive" :sub-group="subGroup" :nav="nav" :avatar="avatar" :rounded="rounded">
+                    <v-list >
                         <v-subheader>Отзывы</v-subheader>
                     </v-list>
                 </v-card>
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-//import { auth } from 'firebase';
+//import firebase from 'firebase';
 //var user = firebase.auth().currentUser;
     export default {
         name: "Account",
@@ -49,7 +49,7 @@
 
         }
     }
-    
+
 </script>
 
 <style scoped>
