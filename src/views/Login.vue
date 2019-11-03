@@ -1,9 +1,9 @@
 <template>
-  <div class="login">
+  <div class="login mt-4" >
     <h3>Вход</h3>
-    <input type="text" v-model="email" placeholder="Email"><br>
-    <input type="password" v-model="password" placeholder="Пароль"><br>
-    <v-btn @click="login">Войти</v-btn>
+    <v-text-field type="text"  v-model="email" placeholder="Email"><br> </v-text-field>
+    <v-text-field type="password" v-model="password" placeholder="Пароль"><br> </v-text-field>
+    <v-btn @click="login" color="success">Войти</v-btn>
     <p> У вас нет аккаунта? Вы можете <router-link to="/sign-up">создать учетную запись</router-link></p>
   </div>
 </template>
@@ -36,8 +36,9 @@
 
 <style scoped>  /* "scoped" attribute limit the CSS to this component only */
   .login {
-    margin-top: 40px;
+    margin: auto;
     text-align: center;
+    width: 50%;
   }
   input {
     margin: 10px 0;
