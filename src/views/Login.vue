@@ -20,6 +20,7 @@
     },
     methods: {
       login: function() {
+        document.getElementById("cock").innerText = "Выйти";
         firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
           () => {
             this.$router.replace('account');

@@ -9,7 +9,7 @@
                             <v-btn x-small color="success" dark>Поменять аватар</v-btn>
                         </div>
                         <v-list-item-content class="ml-5">
-                            <v-list-item-title class="headline mb-1">timaracer72@gmail.com</v-list-item-title>
+                            <v-list-item-title class="headline mb-1">57thrasher57@gmail.com</v-list-item-title>
                             <v-list-item-subtitle>nickname: we_wanna_win_makerthon</v-list-item-subtitle>
                         </v-list-item-content>
                     </v-list-item>
